@@ -1,0 +1,11 @@
+Thực hành session-cookie 
+1. Biết thông tin đăng nhập của website như sau: 
+Website: https://pw-practice-dev.playwrightvn.com/wp-login.php 
+Username: a101 
+Password: !NE%Mdymzat@LWPaQKPau5JJ 
+Hãy thực hiện đăng nhập với tài khoản trên, copy các cookie được tạo ra sau khi đăng nhập thành công, tạo mới file lesson-03/02-session-cookie.txt và các cookie ở dạng: key=value (mỗi cookie trên một dòng). 
+
+set-cookie: wordpress_test_cookie=WP%20Cookie%20check; path=/; secure
+set-cookie: wordpress_sec_e778134cbff8432635b7b4b45a7ba56c=a101%7C1742398948%7CdfS0Gpaku4CSiseOVbHa3T0j4oUZ3bsq0DW2EmPQOrV%7Cb012eabe63425a2aeda3acc83a3ddedb1a6e6cbe27c10783bcb062134d97718f; path=/wp-content/plugins; secure; HttpOnly
+set-cookie: wordpress_sec_e778134cbff8432635b7b4b45a7ba56c=a101%7C1742398948%7CdfS0Gpaku4CSiseOVbHa3T0j4oUZ3bsq0DW2EmPQOrV%7Cb012eabe63425a2aeda3acc83a3ddedb1a6e6cbe27c10783bcb062134d97718f; path=/wp-admin; secure; HttpOnly
+set-cookie: wordpress_logged_in_e778134cbff8432635b7b4b45a7ba56c=a101%7C1742398948%7CdfS0Gpaku4CSiseOVbHa3T0j4oUZ3bsq0DW2EmPQOrV%7Cdf402c5404b5624ce22aa11703e24c3d99e5a3cea799553ca7a86f3b64db594f; path=/; secure; HttpOnly

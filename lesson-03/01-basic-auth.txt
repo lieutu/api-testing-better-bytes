@@ -1,0 +1,9 @@
+Thực hành basic auth 
+1. Biết các thông tin đăng nhập username và password như dưới đây: 
+Username: bba_academy 
+Password: a101_class_secret 
+Tạo file lesson-03/01-basic-auth.txt, lưu vào đó basic auth token của user này.
+2. Thực hiện request trong postman tới địa chỉ 
+https://httpbin.org/basic-auth/bba_academy/a101_class_secret với token được tạo ở bài 1 
+
+Basic YmJhX2FjYWRlbXk6YTEwMV9jbGFzc19zZWNyZXQ=

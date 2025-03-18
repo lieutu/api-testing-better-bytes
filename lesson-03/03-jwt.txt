@@ -1,0 +1,6 @@
+Thực hành jwt 
+1. Hãy giải mã token dưới đây, sau đó tạo file lesson-03/03-jwt.txt và paste nội dung đã giải mã vào đó 
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI3MDA4MGFhMy01NTYx LTRmNWItOWRhZS0yNGFiNTcwYjc0MjEiLCJlbWFpbCI6ImRvbWluaHBob25nMzA2Q GdtYWlsLmNvbSIsInJvbGUiOiJjdXN0b21lciIsImlhdCI6MTc0MTY1NjExMSwiZXhwI joxNzQxNzQyNTExfQ.OlvEGmuAqRETbigoscruOsxDmU0o3r-Tg1OaiNnvVbQ
+
+{"alg":"HS256","typ":"JWT"} {"sub":"70080aa3-5561-4f5b-9dae-24ab570b7421","email":"dominhphong306@gmail.com","role":"customer","iat":1741656111,"exp":1741742511}
+:[kn((:CM(޿SU
