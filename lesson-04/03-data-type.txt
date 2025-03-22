@@ -1,0 +1,18 @@
+{
+    "planet_name": "Kepler-22b",
+    "distance_to_earth": 587,
+    "habitable": true,
+    "visited_countries": ["Vietnam", "Cambodia", "Thailand"]
+}
+<planet>
+    <name>Kepler-22b</name>
+    <distanceToEarth>587</distanceToEarth>
+    <habitable>true</habitable>
+    <visitedCountries>
+        <country>Vietnam</country>
+        <country>Cambodia</country>
+        <country>Thailand</country>
+    </visitedCountries>
+</planet>
+
+JSON tối ưu hơn XML vì nó nhẹ hơn XML, dễ viết và dễ đọc hơn XML. JSON có tốc độ truyền tải nhanh hơn XML

@@ -1,0 +1,1114 @@
+{
+	"info": {
+		"_postman_id": "7e84393c-b4c2-48da-bcc4-4348be638491",
+		"name": "Better Bytes Library",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "4513632"
+	},
+	"item": [
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"username\": \"{{username}}\",\n  \"password\": \"{{password}}\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://bblib-dev-api.betterbytesvn.cloud/v2/admin/auth/login",
+							"protocol": "https",
+							"host": [
+								"bblib-dev-api",
+								"betterbytesvn",
+								"cloud"
+							],
+							"path": [
+								"v2",
+								"admin",
+								"auth",
+								"login"
+							]
+						},
+						"description": "Generated from cURL: curl -X 'POST' \\\n  'https://bblib-dev-api.betterbytesvn.cloud/v2/admin/auth/login' \\\n  -H 'accept: */*' \\\n  -H 'Content-Type: application/json' \\\n  -d '{\n  \"username\": \"user@betterbytesvn.com\",\n  \"password\": \"123@123A\"\n}'"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "authors",
+			"item": [
+				{
+					"name": "update author",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Nguyễn Nhật Ánh - v1\",\n  \"description\": \"Update name for Nguyen Nhat Anh\",\n  \"birthDate\": \"2025-03-22T15:16:19.917Z\",\n  \"deathDate\": \"2025-03-22T15:16:19.917Z\",\n  \"nationality\": \"VN\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/admin/authors/1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"admin",
+								"authors",
+								"1"
+							]
+						},
+						"description": "Generated from cURL: curl -X 'PATCH' \\\n  'https://bblib-dev-api.betterbytesvn.cloud/v2/admin/authors/1' \\\n  -H 'accept: application/json' \\\n  -H 'Content-Type: application/json' \\\n  -d '{\n  \"name\": \"string\",\n  \"description\": \"string\",\n  \"birthDate\": \"2025-03-22T15:16:19.917Z\",\n  \"deathDate\": \"2025-03-22T15:16:19.917Z\",\n  \"nationality\": \"string\"\n}'"
+					},
+					"response": []
+				},
+				{
+					"name": "delete a author",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/v2/admin/authors/8",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"v2",
+								"admin",
+								"authors",
+								"8"
+							]
+						},
+						"description": "Generated from cURL: curl -X 'DELETE' \\\n  'https://bblib-dev-api.betterbytesvn.cloud/v2/admin/authors/8' \\\n  -H 'accept: */*'"
+					},
+					"response": []
+				},
+				{
+					"name": "get author by id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/admin/authors/1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"admin",
+								"authors",
+								"1"
+							]
+						},
+						"description": "Generated from cURL: curl -X 'GET' \\\n  'https://bblib-dev-api.betterbytesvn.cloud/v2/admin/authors/1' \\\n  -H 'accept: application/json'"
+					},
+					"response": []
+				},
+				{
+					"name": "get all authors",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/admin/authors?page=1&limit=10",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"admin",
+								"authors"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "10"
+								}
+							]
+						},
+						"description": "Generated from cURL: curl -X 'GET' \\\n  'https://bblib-dev-api.betterbytesvn.cloud/v2/admin/authors?page=1&limit=10' \\\n  -H 'accept: application/json'"
+					},
+					"response": []
+				},
+				{
+					"name": "create author",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"JK Rowling\",\n  \"description\": \"Nữ nhà văn người Anh, tác giả bộ truyện Harry Potter\",\n  \"birthDate\": \"1965-07-31T15:08:34.093Z\",\n  \"deathDate\": \"\",\n  \"nationality\": \"UK\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/admin/authors",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"admin",
+								"authors"
+							]
+						},
+						"description": "Generated from cURL: curl -X 'POST' \\\n  'https://bblib-dev-api.betterbytesvn.cloud/v2/admin/authors' \\\n  -H 'accept: application/json' \\\n  -H 'Content-Type: application/json' \\\n  -d '{\n  \"name\": \"string\",\n  \"description\": \"string\",\n  \"birthDate\": \"2025-03-22T15:08:34.093Z\",\n  \"deathDate\": \"2025-03-22T15:08:34.093Z\",\n  \"nationality\": \"string\"\n}'"
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "books",
+			"item": [
+				{
+					"name": "get all books by pagination",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/v2/books?page=1&limit=10",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"v2",
+								"books"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "10"
+								}
+							]
+						},
+						"description": "Generated from cURL: curl -X 'GET' \\\n  'https://bblib-dev-api.betterbytesvn.cloud/v2/books?page=1&limit=10' \\\n  -H 'accept: */*'"
+					},
+					"response": []
+				},
+				{
+					"name": "updata a book",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"The Great Gatsby\",\n  \"description\": \"A novel by F. Scott Fitzgerald\",\n  \"publishedYear\": 1950,\n  \"imageUrl\": \"https://example.com/book-cover.jpg\",\n  \"collectionId\": 1,\n  \"authorId\": 1,\n  \"languageId\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/v2/books/1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"v2",
+								"books",
+								"1"
+							]
+						},
+						"description": "Generated from cURL: curl -X 'PATCH' \\\n  'https://bblib-dev-api.betterbytesvn.cloud/v2/books/1' \\\n  -H 'accept: */*' \\\n  -H 'Content-Type: application/json' \\\n  -d '{\n  \"name\": \"The Great Gatsby\",\n  \"description\": \"A novel by F. Scott Fitzgerald\",\n  \"publishedYear\": 1925,\n  \"imageUrl\": \"https://example.com/book-cover.jpg\",\n  \"collectionId\": 1,\n  \"authorId\": 1,\n  \"languageId\": 1\n}'"
+					},
+					"response": []
+				},
+				{
+					"name": "get a book by id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/books/1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"books",
+								"1"
+							]
+						},
+						"description": "Generated from cURL: curl -X 'GET' \\\n  'https://bblib-dev-api.betterbytesvn.cloud/v2/books/1' \\\n  -H 'accept: */*'"
+					},
+					"response": []
+				},
+				{
+					"name": "delete a book",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/v2/books/1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"v2",
+								"books",
+								"1"
+							]
+						},
+						"description": "Generated from cURL: curl -X 'DELETE' \\\n  'https://bblib-dev-api.betterbytesvn.cloud/v2/books/1' \\\n  -H 'accept: */*'"
+					},
+					"response": []
+				},
+				{
+					"name": "create a book",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Harry Potter\",\n  \"description\": \"A novel by JK Rowling\",\n  \"publishedYear\": 1925,\n  \"imageUrl\": \"https://cdn.shopify.com/s/files/1/0051/8845/2401/files/Y3593HarryPotterandtheDeathlyHallows_ROUNDED_6cb607db-3098-4853-836d-ae2672dd30b6_768x.png?v=1724245487\",\n  \"collectionId\": 1,\n  \"authorId\": 8,\n  \"languageId\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/books",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"books"
+							]
+						},
+						"description": "Generated from cURL: curl -X 'POST' \\\n  'https://bblib-dev-api.betterbytesvn.cloud/v2/books' \\\n  -H 'accept: */*' \\\n  -H 'Content-Type: application/json' \\\n  -d '{\n  \"name\": \"The Great Gatsby\",\n  \"description\": \"A novel by F. Scott Fitzgerald\",\n  \"publishedYear\": 1925,\n  \"imageUrl\": \"https://example.com/book-cover.jpg\",\n  \"collectionId\": 1,\n  \"authorId\": 1,\n  \"languageId\": 1\n}'"
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "collections",
+			"item": [
+				{
+					"name": "get a collection by id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/admin/collections/1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"admin",
+								"collections",
+								"1"
+							]
+						},
+						"description": "Generated from cURL: curl -X 'GET' \\\n  'https://bblib-dev-api.betterbytesvn.cloud/v2/admin/collections/1' \\\n  -H 'accept: application/json'"
+					},
+					"response": []
+				},
+				{
+					"name": "create a collection",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Truyện tâm linh\",\n  \"description\": \"Truyện tâm linh\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/admin/collections",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"admin",
+								"collections"
+							]
+						},
+						"description": "Generated from cURL: curl -X 'POST' \\\n  'https://bblib-dev-api.betterbytesvn.cloud/v2/admin/collections' \\\n  -H 'accept: application/json' \\\n  -H 'Content-Type: application/json' \\\n  -d '{\n  \"name\": \"string\",\n  \"description\": \"string\",\n  \"imageUrl\": \"string\"\n}'"
+					},
+					"response": []
+				},
+				{
+					"name": "delete a collection",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/admin/collections/20",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"admin",
+								"collections",
+								"20"
+							]
+						},
+						"description": "Generated from cURL: curl -X 'DELETE' \\\n  'https://bblib-dev-api.betterbytesvn.cloud/v2/admin/collections/1' \\\n  -H 'accept: */*'"
+					},
+					"response": []
+				},
+				{
+					"name": "update a collection",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Truyện thần thoại\",\n  \"description\": \"Truyện thần thoại\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/admin/collections/20",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"admin",
+								"collections",
+								"20"
+							]
+						},
+						"description": "Generated from cURL: curl -X 'PATCH' \\\n  'https://bblib-dev-api.betterbytesvn.cloud/v2/admin/collections/1' \\\n  -H 'accept: application/json' \\\n  -H 'Content-Type: application/json' \\\n  -d '{\n  \"name\": \"string\",\n  \"description\": \"string\",\n  \"imageUrl\": \"string\"\n}'"
+					},
+					"response": []
+				},
+				{
+					"name": "get all collections",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/admin/collections?page=1&limit=10",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"admin",
+								"collections"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "10"
+								}
+							]
+						},
+						"description": "Generated from cURL: curl -X 'GET' \\\n  'https://bblib-dev-api.betterbytesvn.cloud/v2/admin/collections?page=1&limit=10' \\\n  -H 'accept: application/json'"
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "languages",
+			"item": [
+				{
+					"name": "create a new language",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Russia\",\n  \"description\": \"Russia language books\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/admin/languages",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"admin",
+								"languages"
+							]
+						},
+						"description": "Generated from cURL: curl -X 'POST' \\\n  'https://bblib-dev-api.betterbytesvn.cloud/v2/admin/languages' \\\n  -H 'accept: application/json' \\\n  -H 'Content-Type: application/json' \\\n  -d '{\n  \"name\": \"English\",\n  \"description\": \"English language books\"\n}'"
+					},
+					"response": []
+				},
+				{
+					"name": "get a language by id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/admin/languages/1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"admin",
+								"languages",
+								"1"
+							]
+						},
+						"description": "Generated from cURL: curl -X 'GET' \\\n  'https://bblib-dev-api.betterbytesvn.cloud/v2/admin/languages/1' \\\n  -H 'accept: application/json'"
+					},
+					"response": []
+				},
+				{
+					"name": "get all languages",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/admin/languages?page=1&limit=10",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"admin",
+								"languages"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "10"
+								}
+							]
+						},
+						"description": "Generated from cURL: curl -X 'GET' \\\n  'https://bblib-dev-api.betterbytesvn.cloud/v2/admin/languages?page=1&limit=10' \\\n  -H 'accept: application/json'"
+					},
+					"response": []
+				},
+				{
+					"name": "delete a language",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/admin/languages/1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"admin",
+								"languages",
+								"1"
+							]
+						},
+						"description": "Generated from cURL: curl -X 'DELETE' \\\n  'https://bblib-dev-api.betterbytesvn.cloud/v2/admin/languages/1' \\\n  -H 'accept: */*'"
+					},
+					"response": []
+				},
+				{
+					"name": "update a language",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"English\",\n  \"description\": \"English language books\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/admin/languages/1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"admin",
+								"languages",
+								"1"
+							]
+						},
+						"description": "Generated from cURL: curl -X 'PATCH' \\\n  'https://bblib-dev-api.betterbytesvn.cloud/v2/admin/languages/1' \\\n  -H 'accept: application/json' \\\n  -H 'Content-Type: application/json' \\\n  -d '{\n  \"name\": \"English\",\n  \"description\": \"English language books\"\n}'"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "reviews",
+			"item": [
+				{
+					"name": "create a review",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"rating\": 5,\n  \"content\": \"Excellent\",\n  \"userId\": 1,\n  \"bookId\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/admin/reviews",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"admin",
+								"reviews"
+							]
+						},
+						"description": "Generated from cURL: curl -X 'POST' \\\n  'https://bblib-dev-api.betterbytesvn.cloud/v2/admin/reviews' \\\n  -H 'accept: application/json' \\\n  -H 'Content-Type: application/json' \\\n  -d '{\n  \"rating\": 5,\n  \"content\": \"string\",\n  \"userId\": 0,\n  \"bookId\": 0\n}'"
+					},
+					"response": []
+				},
+				{
+					"name": "get a review by id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/admin/reviews/1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"admin",
+								"reviews",
+								"1"
+							]
+						},
+						"description": "Generated from cURL: curl -X 'GET' \\\n  'https://bblib-dev-api.betterbytesvn.cloud/v2/admin/reviews/1' \\\n  -H 'accept: application/json'"
+					},
+					"response": []
+				},
+				{
+					"name": "delete a review",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/admin/reviews/1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"admin",
+								"reviews",
+								"1"
+							]
+						},
+						"description": "Generated from cURL: curl -X 'DELETE' \\\n  'https://bblib-dev-api.betterbytesvn.cloud/v2/admin/reviews/1' \\\n  -H 'accept: */*'"
+					},
+					"response": []
+				},
+				{
+					"name": "update a review",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"rating\": 1,\n  \"content\": \"So bad\",\n  \"userId\": 0,\n  \"bookId\": 0\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/admin/reviews/1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"admin",
+								"reviews",
+								"1"
+							]
+						},
+						"description": "Generated from cURL: curl -X 'PATCH' \\\n  'https://bblib-dev-api.betterbytesvn.cloud/v2/admin/reviews/1' \\\n  -H 'accept: application/json' \\\n  -H 'Content-Type: application/json' \\\n  -d '{\n  \"rating\": 5,\n  \"content\": \"string\",\n  \"userId\": 0,\n  \"bookId\": 0\n}'"
+					},
+					"response": []
+				},
+				{
+					"name": "get all reviews",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/admin/reviews",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"admin",
+								"reviews"
+							]
+						},
+						"description": "Generated from cURL: curl -X 'GET' \\\n  'https://bblib-dev-api.betterbytesvn.cloud/v2/admin/reviews' \\\n  -H 'accept: application/json'"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "get a user by id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/admin/users/7",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"admin",
+								"users",
+								"7"
+							]
+						},
+						"description": "Generated from cURL: curl -X 'GET' \\\n  'https://bblib-dev-api.betterbytesvn.cloud/v2/admin/users/7' \\\n  -H 'accept: application/json'"
+					},
+					"response": []
+				},
+				{
+					"name": "delete a user",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/admin/users/10",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"admin",
+								"users",
+								"10"
+							]
+						},
+						"description": "Generated from cURL: curl -X 'DELETE' \\\n  'https://bblib-dev-api.betterbytesvn.cloud/v2/admin/users/10' \\\n  -H 'accept: */*'"
+					},
+					"response": []
+				},
+				{
+					"name": "get all users",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/admin/users?page=1&limit=10",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"admin",
+								"users"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "10"
+								}
+							]
+						},
+						"description": "Generated from cURL: curl -X 'GET' \\\n  'https://bblib-dev-api.betterbytesvn.cloud/v2/admin/users?page=1&limit=10' \\\n  -H 'accept: application/json'"
+					},
+					"response": []
+				},
+				{
+					"name": "update a user",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/admin/users/10",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"admin",
+								"users",
+								"10"
+							]
+						},
+						"description": "Generated from cURL: curl -X 'PATCH' \\\n  'https://bblib-dev-api.betterbytesvn.cloud/v2/admin/users/8' \\\n  -H 'accept: application/json'"
+					},
+					"response": []
+				},
+				{
+					"name": "create a new user",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Lieu Tu\",\n  \"username\": \"Tom\",\n  \"password\": \"password123\",\n  \"role\": \"admin\",\n  \"status\": \"active\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}admin/users",
+							"host": [
+								"{{baseUrl}}admin"
+							],
+							"path": [
+								"users"
+							]
+						},
+						"description": "Generated from cURL: curl -X 'POST' \\\n  'https://bblib-dev-api.betterbytesvn.cloud/v2/admin/users' \\\n  -H 'accept: application/json' \\\n  -H 'Content-Type: application/json' \\\n  -d '{\n  \"name\": \"John Doe\",\n  \"username\": \"johndoe\",\n  \"password\": \"password123\",\n  \"role\": \"user\",\n  \"status\": \"active\"\n}'"
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{token}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
